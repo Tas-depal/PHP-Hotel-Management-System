@@ -289,7 +289,7 @@
 		   <h3 class="title-w3-agileits title-black-wthree">Rooms And Rates</h3>
 		   <div class="priceing-table-main">
 		       <?php
-	           while($data = mysqli_fetch_assoc($select))
+	           while($data = pg_fetch_assoc($select))
 	           {
 
 	           ?>
@@ -350,8 +350,8 @@
 			    </div>
 			   <?php
                }
-               $sql = mysqli_query($conn,"SELECT COUNT(room_id) AS total FROM goldenstone_addroom"); 
-				    $data = mysqli_fetch_assoc($sql);
+               $sql = pg_query($conn,"SELECT COUNT(room_id) AS total FROM goldenstone_addroom"); 
+				    $data = pg_fetch_assoc($sql);
 				    $total_pages = ceil($data["total"] / $results_per_page);
 				    for ($i=1; $i<=$total_pages; $i++) 
 				    {  // print links for all pages

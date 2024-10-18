@@ -16,7 +16,7 @@
 		   <div class="priceing-table-main">
 		       <?php
 	           $i = 0;
-	           while($bookingDetails = mysqli_fetch_assoc($q))
+	           while($bookingDetails = pg_fetch_assoc($q))
 	           {
 	           ?>
 			    <div class="col-md-3 price-grid" style="margin-bottom: 5%;">

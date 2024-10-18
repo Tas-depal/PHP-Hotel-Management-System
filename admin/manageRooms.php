@@ -25,7 +25,7 @@
                             <tbody>
                                <?php
                                $i = 0;
-                               while($data = mysqli_fetch_assoc($select))
+                               while($data = pg_fetch_assoc($select))
                                {
                                 ?>
                                   <tr>
